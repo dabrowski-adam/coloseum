@@ -1,0 +1,128 @@
+@charset 'utf-8';
+@import '../_bulma'; // Bulma utilites and base plus customized variables
+@import '../../../node_modules/bulma/sass/grid/columns';
+@import '../../../node_modules/bulma/sass/elements/title';
+@import '../../../node_modules/bulma/sass/elements/content';
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100');
+
+// Typography
+h1 {
+  @extend .title;
+  @extend .is-1;
+  font-family: 'Quicksand';
+  // Quicksand
+}
+
+h2 {
+  @extend .subtitle;
+  @extend .is-4;
+  font-family: 'Roboto';
+  font-weight: 100;
+  // Roboto Thin
+}
+
+p {
+  @extend .has-text-left;
+  @extend .is-5;
+  // line-height: 120%;
+  // Work Sans light
+}
+
+ul {
+  @extend .has-text-left;
+}
+
+// Grid
+
+.Base {
+  @extend .columns;
+  @extend .is-multiline;
+  @extend .is-gapless;
+}
+
+.Tall {
+  @extend .column;
+  @extend .is-6;
+  min-height: 100vh;
+}
+
+.Wide {
+  @extend .column;
+  @extend .is-12;
+  min-height: 50vh;
+}
+
+.Small {
+  width: 100%;
+  height: 50%;
+}
+
+// Presentation
+.Content {
+  @extend .has-text-centered;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+}
+
+.Logo {
+  @extend .Content;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  img {
+    padding: 0;
+  }
+}
+
+.Text {
+  @extend .content;
+  @extend .is-medium;
+  flex-grow: 1;
+  padding: 3rem;
+  font-family: 'Work Sans';
+  font-weight: 300;
+}
+
+.Contact {
+  @extend .Content;
+  background: url('../../../public/pictures/brushes.jpg');
+  background-size: cover;
+  background-position: center;
+  font-family: 'Quicksand';
+  h2 {
+    font-family: 'Work Sans';
+  }
+  p {
+    text-align: center;
+  }
+  h2, p {
+    font-size: 48px;
+    color: #FFF;
+  }
+  // Mobile
+  padding: 3rem;
+  min-height: 50vh;
+}
+
+img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+img.Logo {
+  align-self: center;
+  width: 190px;
+  height: 128px;
+  margin: 5px;
+}
+
+.Copyright{
+  @extend .has-text-centered;
+}
